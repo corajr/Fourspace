@@ -61,7 +61,6 @@
     "mainVarName": "Fourspace"
   },
   "dependencies": {
-    "lodash": "^4.6.1",
     "three": "^0.74.0"
   }
 }

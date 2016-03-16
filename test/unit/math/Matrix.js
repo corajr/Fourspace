@@ -1,8 +1,7 @@
 import THREE from 'three';
 import { applyMatrixToVec4Array } from '../../../src/math/Matrix.js';
 import jsc from 'jsverify';
-import { fixedArray } from '../property-helper.js';
-import _ from 'lodash';
+import { fixedArray, allEqual } from '../property-helper.js';
 
 describe('applyMatrixToVec4Array', () => {
   const identity = new THREE.Matrix4();
@@ -16,6 +15,6 @@ describe('applyMatrixToVec4Array', () => {
   jsc.property('should not change an array, when using the identity matrix', fixedArray(jsc.number, 8), (arr) => {
     let arr2 = arr.slice();
     applyMatrixToVec4Array(identity, arr2);
-    return _.isEqual(arr, arr2);
+    return allEqual(arr, arr2);
   });
 });

@@ -13,7 +13,7 @@ class FourspaceGeometry extends THREE.BufferGeometry {
       this.boundingBox = new Box4();
     }
 
-    let positions = this.attributes.positions;
+    let positions = this.attributes.position;
 
     if (positions && positions.array) {
       this.boundingBox.setFromArray(positions.array);
