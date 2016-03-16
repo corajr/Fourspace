@@ -48,6 +48,7 @@
     "gulp-util": "^3.0.7",
     "isparta": "^4.0.0",
     "json-loader": "^0.5.3",
+    "jsverify": "^0.7.1",
     "mocha": "^2.3.4",
     "sinon": "^1.17.2",
     "sinon-chai": "^2.8.0",
@@ -60,6 +61,7 @@
     "mainVarName": "Fourspace"
   },
   "dependencies": {
+    "lodash": "^4.6.1",
     "three": "^0.74.0"
   }
 }

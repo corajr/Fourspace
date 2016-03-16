@@ -1,3 +1,5 @@
+import THREE from 'three';
+
 function applyMatrixToVec4Array(matrix, array) {
   let v1 = new THREE.Vector4();
   let offset = 0;
