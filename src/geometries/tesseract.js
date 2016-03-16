@@ -36,3 +36,5 @@ class TesseractGeometry extends FourspaceGeometry {
     this.addAttribute('position', new THREE.BufferAttribute(vertices, 4));
   }
 }
+
+export default TesseractGeometry;
