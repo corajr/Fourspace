@@ -2,6 +2,7 @@
   "parser": "babel-eslint",
   "rules": {
     "strict": 0,
+    "dot-notation": 0,
     "quotes": [2, "single"]
   },
   "env": {

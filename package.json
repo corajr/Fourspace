@@ -58,5 +58,8 @@
   "babelBoilerplateOptions": {
     "entryFileName": "fourspace",
     "mainVarName": "Fourspace"
+  },
+  "dependencies": {
+    "three": "^0.74.0"
   }
 }
