@@ -2,5 +2,6 @@
   "preset": "google",
   "maximumLineLength": null,
   "esnext": true,
+  "requireDotNotation": { "allExcept": [ "snake_case" ] },
   "disallowSpacesInsideObjectBrackets": null
 }
