@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>three.js webgl - geometry - cube</title>
+		<title>three.js webgl - geometry - tesseract</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<style>
@@ -14,10 +14,8 @@
 	</head>
 	<body>
 
-		<script src="../build/three.min.js"></script>
-    <script src="FourspaceGeometry.js"></script>
-    <script src="extras/TesseractGeometry.js"></script>
-    <script src="FourspaceShader.js"></script>
+		<script src="node_modules/three/three.js"></script>
+    <script src="dist/fourspace.js"></script>
 
 		<script>
 
@@ -34,16 +32,16 @@
 
 				scene = new THREE.Scene();
 
-				var geometry = new THREE.TesseractGeometry();
+				var geometry = new Fourspace.default.TesseractGeometry();
         /* var geometry = new THREE.BoxGeometry(200,200,200); */
 
-        var uniforms = THREE.FourspaceShader.depth.uniforms;
+        var uniforms = Fourspace.default.FourspaceShader.depth.uniforms;
         uniforms.mFar.value = 1000.0;
 
 				var material = new THREE.RawShaderMaterial({
           uniforms: uniforms,
-          vertexShader: THREE.FourspaceShader.depth.vertexShader,
-          fragmentShader: THREE.FourspaceShader.depth.fragmentShader,
+          vertexShader: Fourspace.default.FourspaceShader.depth.vertexShader,
+          fragmentShader: Fourspace.default.FourspaceShader.depth.fragmentShader,
         });
 
         mesh = new THREE.Mesh( geometry, material );

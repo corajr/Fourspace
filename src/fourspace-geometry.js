@@ -24,6 +24,17 @@ class FourspaceGeometry extends THREE.BufferGeometry {
 
     return this.boundingBox;
   }
+
+  computeBoundingSphere() {
+    this.computeBoundingBox();
+    if (this.boundingSphere === null) {
+      this.boundingSphere = new THREE.Sphere();
+    }
+
+    this.boundingSphere.center = new THREE.Vector3()
+      .addVectors(this.boundingBox.min, this.boundingBox.max)
+      .multiplyScalar(0.5);
+  }
 }
 
 export default FourspaceGeometry;
