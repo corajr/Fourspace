@@ -1,12 +1,8 @@
 import THREE from 'three';
 import { applyMatrixToVec4Array } from '../../../src/math/Matrix.js';
 import jsc from 'jsverify';
+import { fixedArray } from '../property-helper.js';
 import _ from 'lodash';
-
-function fixedArray(gen, len) {
-  var tuple = Array.apply(null, Array(len)).map(() => { return gen; });
-  return jsc.tuple(tuple);
-}
 
 describe('applyMatrixToVec4Array', () => {
   const identity = new THREE.Matrix4();
